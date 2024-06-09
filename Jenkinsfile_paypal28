@@ -22,7 +22,6 @@ node{
         input message: 'Application ready for deployment, Please review and approve'
     }
  }
-/*
  stage('7deploy_prod'){
      deploy adapters: [tomcat9(credentialsId: 'tomcatCredentials', path: '', url: 'http://18.119.10.206:8080/')], contextPath: null, war: 'target/*war'
  }
@@ -33,5 +32,4 @@ node{
 Regards,
 Landmark Technologies''', recipientProviders: [buildUser(), developers(), contributor()], subject: 'Build Status', to: 'paypal-team@gmail.com'
  }
-*/
 }  
