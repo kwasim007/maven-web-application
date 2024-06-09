@@ -45,19 +45,18 @@ pipeline{
     failure{
          emailext body: '''Hi Team,
 Build failed
-Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
+Devops Xpress''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
 
-    }
+   }
     success{
          emailext body: '''Hi Team,
 Build succeeded
-Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
-
+Devops Xpress, recipientProviders: [developers(), buildUser()], subject: 'Build succeeded', to: 'marfo30@gmail.com'
     }
     always{
          emailext body: '''Hi Team,
 Build status
-Landmark Technologies''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
+Devops Xpress''', recipientProviders: [developers(), contributor()], subject: 'build status', to: 'developers'
 
     }
   }
