@@ -2,10 +2,10 @@ node{
     def mavenHome = tool name: 'maven'
     stage('1.CloneCode'){
         //Jenkins running on a Linux system  
-        //sh "git clone https://github.com/LandmakTechnology/maven-web-application"
+        //sh "git clone https://github.com/kwasim007/maven-web-application"
         git "https://github.com/kwasim007/maven-web-application"
         //Jenkins running on a windows system
-        //bat "git clone https://github.com/LandmakTechnology/maven-web-application"  
+        //bat "git clone https://github.com/kwasim007/maven-web-application"  
     }
     stage('2.mvnBuild'){
         sh "${mavenHome}/bin/mvn clean package"
